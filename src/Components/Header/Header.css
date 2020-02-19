@@ -1,0 +1,9 @@
+header{
+    width: 100vw;
+    height: 10vh;
+    background-color:#AB2A19 ;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 300px;
+}
