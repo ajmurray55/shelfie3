@@ -1,11 +1,10 @@
 import React from 'react'
-// import axios from 'axios'
 import Product from '../Product/Product'
 
 
     function Dashboard(props){
         const mappedData = props.inventory.map(products => {
-            return <Product products={products}/>
+            return <Product products={products} deleteProduct={props.deleteProduct}/>
         })
         return(
             <div>

@@ -15,6 +15,8 @@ massive(DB_STRING).then(db => {
 
 // ENDPOINTS
 app.get('/api/inventory', ctrl.getAll)
+app.post('/api/product', ctrl.addOne)
+app.delete('/api/product/:id', ctrl.delete)
 
 
 

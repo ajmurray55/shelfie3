@@ -7,7 +7,7 @@ class Form extends Component{
         this.state = { 
             name:"",
             price:0,
-            imageUrl:""
+            imageurl:""
 
         }
     }
@@ -21,21 +21,36 @@ class Form extends Component{
         this.setState({
             name:"",
             price: 0,
-            imageUrl:""
+            imageurl:""
         })
     }
+    addProduct = () => {
+         const {name, price, imageurl} = this.state
+         let newProduct = {
+            name,
+            price,
+            imageurl
+         }
+         this.props.addProduct(newProduct)
+        this.setState({
+            name:"",
+            price: 0,
+            imageurl:""
+        })
+   }
     render(){
-        const {name, price, imageUrl} = this.state
+        console.log("imageurl", this.state.imageurl)
+        const {name, price, imageurl} = this.state
         return(
             <div>
                 <h3>Image URL:</h3>
-                <input name='imageUrl' value={imageUrl} onChange = {this.handleChange}/>
+                <input name='imageurl' value={imageurl} onChange = {this.handleChange}/>
                 <h3>Product Name:</h3>
                 <input name='name'value={name} onChange = {this.handleChange}/>
                 <h3>Price:</h3>
                 <input name='price' value={price} onChange = {this.handleChange}/>
-        <button onClick={this.resetChange}>Cancel</button>
-                <button>Add to Inventory</button>
+                <button onClick={this.resetChange}>Cancel</button>
+                <button onClick={this.addProduct}>Add to Inventory</button>
             </div>
         )
     }
