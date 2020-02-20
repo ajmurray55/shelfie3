@@ -1,5 +1,5 @@
 INSERT INTO inventory
-(imageUrl, name, price)
+(imageurl, name, price)
 VALUES
 ($1, $2, $3);
 

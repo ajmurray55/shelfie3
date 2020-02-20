@@ -17,6 +17,7 @@ massive(DB_STRING).then(db => {
 app.get('/api/inventory', ctrl.getAll)
 app.post('/api/product', ctrl.addOne)
 app.delete('/api/product/:id', ctrl.delete)
+app.put('/api/product/:id', ctrl.update)
 
 
 
