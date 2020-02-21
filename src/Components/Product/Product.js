@@ -2,6 +2,12 @@ import React from 'react'
 
 
     function Product(props){
+
+        // editChange(){
+
+        // }
+
+
         const {id, name, price, imageurl} = props.products
         console.log("props imageUrl",imageurl)
         return(
